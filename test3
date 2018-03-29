@@ -1,0 +1,50 @@
+			:host {
+				display: block;
+				background-color: var(--ibm-neutral-2);
+			}
+
+			.container {
+				@apply(--layout-vertical);
+			}
+			.dropdown {
+				@apply(--layout-horizontal);
+				@apply(--layout-center);
+			}
+
+			:host([small-screen-width]) .dropdown {
+				@apply(--layout-flex);
+			}
+
+			:host(:not([small-screen-width])) .sort-bar {
+				padding: 15px 20px 0px 20px;
+			}
+
+			:host([small-screen-width]) .sort-bar {
+				padding: 10px;
+				border-bottom: 1px solid var(--tri-primary-content-accent-color);
+			}
+
+			.selected-sort-label {
+				padding-left: 10px;
+			}
+
+			paper-item {
+				cursor: pointer;
+				@apply(--tri-font-family);
+				font-size: 14px;
+				font-weight: normal;
+				--paper-item-min-height: 0;
+				--paper-item-selected-weight: normal;
+				--paper-item: {
+					padding: 10px;
+				};
+			}
+
+			:host(:not([small-screen-width])) paper-item {
+				color: var(--tri-primary-color);
+			}
+
+			:host([small-screen-width]) paper-item {
+				background-color: var(--tri-primary-color);
+				color: white;
+			}
